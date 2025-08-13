@@ -16,7 +16,7 @@ export default function DashboardPage() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
-          <Card className="bg-bg-secondary dark:bg-bg-tertiary border-border-primary hover:shadow-lg transition-shadow">
+          <Card className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-border-primary hover:shadow-lg transition-shadow">
             <CardContent className="p-2 sm:p-3 lg:p-4">
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
@@ -34,7 +34,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-bg-secondary dark:bg-bg-tertiary border-border-primary hover:shadow-lg transition-shadow">
+          <Card className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-border-primary hover:shadow-lg transition-shadow">
             <CardContent className="p-2 sm:p-3 lg:p-4">
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
@@ -52,7 +52,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-bg-secondary dark:bg-bg-tertiary border-border-primary hover:shadow-lg transition-shadow">
+          <Card className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-border-primary hover:shadow-lg transition-shadow">
             <CardContent className="p-2 sm:p-3 lg:p-4">
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
@@ -69,7 +69,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-bg-secondary dark:bg-bg-tertiary border-border-primary hover:shadow-lg transition-shadow">
+          <Card className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-border-primary hover:shadow-lg transition-shadow">
             <CardContent className="p-2 sm:p-3 lg:p-4">
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
@@ -89,7 +89,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Quick Actions */}
-        <Card className="bg-bg-secondary dark:bg-bg-tertiary border-border-primary hover:shadow-lg transition-shadow">
+        <Card className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-border-primary hover:shadow-lg transition-shadow">
           <CardHeader className="pb-2 sm:pb-3">
             <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-text-primary">Quick Actions</h2>
           </CardHeader>

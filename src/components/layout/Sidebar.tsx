@@ -68,7 +68,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Mobile Sidebar - Fully opaque */}
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-bg-secondary border-r border-border-primary
+        fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-bg-secondary-light dark:bg-bg-secondary-dark border-r border-border-primary
         transform transition-transform duration-300 ease-in-out lg:hidden
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         shadow-2xl
@@ -146,7 +146,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:block w-80 bg-bg-secondary border-r border-border-primary h-screen sticky top-0">
+      <aside className="hidden lg:block w-80 bg-bg-secondary-light dark:bg-bg-secondary-dark border-r border-border-primary h-screen sticky top-0">
         <div className="h-full overflow-y-auto">
           <div className="p-6 space-y-6">
             {/* Logo/Brand */}

@@ -11,7 +11,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
   const [notifications] = useState(3);
 
   return (
-    <header className="bg-bg-secondary border-b border-border-primary shadow-sm sticky top-0 z-30">
+    <header className="bg-bg-secondary-light dark:bg-bg-secondary-dark border-b border-border-primary shadow-sm sticky top-0 z-30">
       <div className="flex items-center justify-between px-4 py-4 lg:px-6">
         {/* Left Section */}
         <div className="flex items-center space-x-4">
