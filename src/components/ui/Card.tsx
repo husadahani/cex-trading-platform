@@ -29,7 +29,7 @@ export default function Card({ children, className = '', padding = 'md' }: CardP
     none: '',
   };
   
-  const classes = `bg-bg-secondary dark:bg-bg-primary border border-bg-secondary dark:border-bg-secondary/20 rounded-lg shadow-sm ${paddingClasses[padding]} ${className}`;
+  const classes = `bg-bg-primary border border-border-primary rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 ${paddingClasses[padding]} ${className}`;
   
   return (
     <div className={classes}>
@@ -40,7 +40,7 @@ export default function Card({ children, className = '', padding = 'md' }: CardP
 
 export function CardHeader({ children, className = '' }: CardHeaderProps) {
   return (
-    <div className={`border-b border-bg-secondary dark:border-bg-secondary/20 pb-4 mb-4 ${className}`}>
+    <div className={`border-b border-border-primary pb-4 mb-4 ${className}`}>
       {children}
     </div>
   );
@@ -56,7 +56,7 @@ export function CardContent({ children, className = '' }: CardContentProps) {
 
 export function CardFooter({ children, className = '' }: CardFooterProps) {
   return (
-    <div className={`border-t border-bg-secondary dark:border-bg-secondary/20 pt-4 mt-4 ${className}`}>
+    <div className={`border-t border-border-primary pt-4 mt-4 ${className}`}>
       {children}
     </div>
   );
