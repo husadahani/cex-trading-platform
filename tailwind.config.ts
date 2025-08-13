@@ -12,7 +12,8 @@ const config: Config = {
       colors: {
         // Binance-inspired color scheme
         'bg-primary': 'var(--bg-primary)',
-        'bg-secondary': 'var(--bg-secondary)',
+        'bg-secondary-light': 'var(--bg-secondary-light)',
+        'bg-secondary-dark': 'var(--bg-secondary-dark)',
         'bg-tertiary': 'var(--bg-tertiary)',
         'cta-primary': 'var(--cta-primary)',
         'cta-secondary': 'var(--cta-secondary)',

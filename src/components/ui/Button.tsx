@@ -17,8 +17,8 @@ export default function Button({
   
   const variantClasses = {
     primary: 'bg-gradient-primary text-text-secondary hover:shadow-lg hover:scale-105 focus:ring-cta-primary/20',
-    secondary: 'bg-bg-secondary text-text-primary border border-border-primary hover:bg-bg-tertiary focus:ring-border-primary/20',
-    outline: 'bg-transparent text-text-primary border border-border-primary hover:bg-bg-secondary focus:ring-border-primary/20',
+    secondary: 'bg-bg-secondary-light dark:bg-bg-secondary-dark text-text-primary border border-border-primary hover:bg-bg-tertiary focus:ring-border-primary/20',
+    outline: 'bg-transparent text-text-primary border border-border-primary hover:bg-bg-secondary-light dark:hover:bg-bg-secondary-dark focus:ring-border-primary/20',
     ghost: 'bg-transparent text-text-secondary hover:bg-bg-tertiary hover:text-text-primary focus:ring-border-primary/20',
     danger: 'bg-danger text-white hover:bg-danger/90 focus:ring-danger/20',
   };

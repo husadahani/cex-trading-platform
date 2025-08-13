@@ -9,13 +9,13 @@ export default function MarketsContent() {
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 sm:mb-6">Markets</h1>
       </div>
       
-      <div className="bg-bg-secondary dark:bg-bg-tertiary rounded-lg shadow-sm border border-border-primary hover:shadow-lg transition-shadow">
+      <div className="bg-bg-secondary-light dark:bg-bg-secondary-dark rounded-lg shadow-sm border border-border-primary hover:shadow-lg transition-shadow">
         <div className="p-4 sm:p-6 border-b border-border-primary">
           <h3 className="text-base sm:text-lg font-semibold text-text-primary">Cryptocurrency Markets</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-bg-primary dark:bg-bg-secondary">
+            <thead className="bg-bg-primary dark:bg-bg-secondary-dark">
               <tr>
                 <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Symbol</th>
                 <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Price</th>
@@ -26,7 +26,7 @@ export default function MarketsContent() {
             </thead>
             <tbody className="divide-y divide-border-primary">
               {mockData.markets.map((market, index) => (
-                <tr key={index} className="hover:bg-bg-primary dark:hover:bg-bg-secondary transition-colors">
+                <tr key={index} className="hover:bg-bg-primary dark:hover:bg-bg-secondary-dark transition-colors">
                   <td className="px-3 sm:px-6 py-4 whitespace-nowrap">
                     <div className="text-sm font-medium text-text-primary">{market.symbol}</div>
                   </td>

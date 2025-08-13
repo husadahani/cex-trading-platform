@@ -13,11 +13,11 @@ const path = require('path');
 // Mapping warna lama ke baru
 const colorMappings = {
   // Background
-  'bg-white': 'bg-bg-secondary',
-  'dark:bg-gray-800': 'dark:bg-bg-primary',
-  'dark:bg-gray-900': 'dark:bg-bg-primary',
-  'bg-gray-100': 'bg-bg-secondary/50',
-  'dark:bg-gray-700': 'dark:bg-bg-secondary/10',
+  'bg-white': 'bg-bg-secondary-light',
+  'dark:bg-gray-800': 'dark:bg-bg-secondary-dark',
+  'dark:bg-gray-900': 'dark:bg-bg-secondary-dark',
+  'bg-gray-100': 'bg-bg-secondary-light/50',
+  'dark:bg-gray-700': 'dark:bg-bg-secondary-dark/10',
   
   // Text
   'text-gray-900': 'text-text-secondary',
@@ -30,12 +30,12 @@ const colorMappings = {
   'dark:text-gray-200': 'dark:text-text-primary',
   
   // Borders
-  'border-gray-200': 'border-bg-secondary',
-  'dark:border-gray-700': 'dark:border-bg-secondary/20',
+  'border-gray-200': 'border-bg-secondary-light',
+  'dark:border-gray-700': 'dark:border-bg-secondary-dark/20',
   
   // Hover states
-  'hover:bg-gray-100': 'hover:bg-bg-secondary/50',
-  'dark:hover:bg-gray-700': 'dark:hover:bg-bg-secondary/10',
+  'hover:bg-gray-100': 'hover:bg-bg-secondary-light/50',
+  'dark:hover:bg-gray-700': 'dark:hover:bg-bg-secondary-dark/10',
   
   // Buttons
   'bg-primary': 'bg-cta-primary',

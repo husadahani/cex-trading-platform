@@ -26,7 +26,8 @@ export const COLORS = {
 // Tailwind class mappings
 export const COLOR_CLASSES = {
   bgPrimary: 'bg-bg-primary',
-  bgSecondary: 'bg-bg-secondary',
+  bgSecondaryLight: 'bg-bg-secondary-light',
+  bgSecondaryDark: 'bg-bg-secondary-dark',
   ctaPrimary: 'bg-cta-primary',
   ctaSecondary: 'bg-cta-secondary',
   textPrimary: 'text-text-primary',
@@ -38,7 +39,8 @@ export const COLOR_CLASSES = {
 // Dark mode specific classes
 export const DARK_MODE_CLASSES = {
   bgPrimary: 'dark:bg-bg-primary',
-  bgSecondary: 'dark:bg-bg-secondary',
+  bgSecondaryLight: 'dark:bg-bg-secondary-light',
+  bgSecondaryDark: 'dark:bg-bg-secondary-dark',
   textPrimary: 'dark:text-text-primary',
   textSecondary: 'dark:text-text-secondary',
 } as const;
@@ -46,8 +48,8 @@ export const DARK_MODE_CLASSES = {
 // Common component color combinations
 export const COMPONENT_COLORS = {
   card: {
-    background: 'bg-bg-secondary dark:bg-bg-primary',
-    border: 'border-bg-secondary dark:border-bg-secondary/20',
+    background: 'bg-bg-secondary-light dark:bg-bg-secondary-dark',
+    border: 'border-bg-secondary-light dark:border-bg-secondary-dark/20',
     text: 'text-text-secondary dark:text-text-primary',
     textMuted: 'text-text-secondary/60 dark:text-text-primary/60',
   },
@@ -57,8 +59,8 @@ export const COMPONENT_COLORS = {
     outline: 'border border-cta-primary text-cta-primary hover:bg-cta-primary/10',
   },
   input: {
-    background: 'bg-bg-secondary dark:bg-bg-primary',
-    border: 'border-bg-secondary dark:border-bg-secondary/20',
+    background: 'bg-bg-secondary-light dark:bg-bg-secondary-dark',
+    border: 'border-bg-secondary-light dark:border-bg-secondary-dark/20',
     text: 'text-text-secondary dark:text-text-primary',
     placeholder: 'placeholder-text-secondary/60 dark:placeholder-text-primary/60',
   },
