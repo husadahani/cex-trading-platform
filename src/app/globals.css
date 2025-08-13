@@ -5,7 +5,7 @@
   --background: #ffffff;
   --foreground: #1E2026;
   --bg-primary: #ffffff;
-  --bg-secondary: #F8F9FA;
+  --bg-secondary: #FAFAFA;
   --bg-tertiary: #F5F5F5;
   --cta-primary: #F0B90B;
   --cta-secondary: #FCD535;
@@ -30,9 +30,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0B0E11;
+    --background: #0C0E12;
     --foreground: #EAECEF;
-    --bg-primary: #0B0E11;
+    --bg-primary: #0C0E12;
     --bg-secondary: #1E2026;
     --bg-tertiary: #2B2F36;
     --cta-primary: #F0B90B;
@@ -52,9 +52,9 @@
 
 /* Dark mode class for manual control */
 .dark {
-  --background: #0B0E11;
+  --background: #0C0E12;
   --foreground: #EAECEF;
-  --bg-primary: #0B0E11;
+  --bg-primary: #0C0E12;
   --bg-secondary: #1E2026;
   --bg-tertiary: #2B2F36;
   --cta-primary: #F0B90B;

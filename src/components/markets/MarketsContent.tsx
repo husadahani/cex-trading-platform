@@ -4,39 +4,39 @@ import { mockData } from '@/lib/mockData';
 
 export default function MarketsContent() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6 px-4 sm:px-6 lg:px-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Markets</h1>
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 sm:mb-6">Markets</h1>
       </div>
       
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Cryptocurrency Markets</h3>
+      <div className="bg-bg-secondary dark:bg-bg-tertiary rounded-lg shadow-sm border border-border-primary hover:shadow-lg transition-shadow">
+        <div className="p-4 sm:p-6 border-b border-border-primary">
+          <h3 className="text-base sm:text-lg font-semibold text-text-primary">Cryptocurrency Markets</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 dark:bg-gray-700">
+            <thead className="bg-bg-primary dark:bg-bg-secondary">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Symbol</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Price</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">24h Change</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Volume</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Action</th>
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Symbol</th>
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Price</th>
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">24h Change</th>
+                <th className="hidden sm:table-cell px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Volume</th>
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-text-tertiary uppercase tracking-wider">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y divide-border-primary">
               {mockData.markets.map((market, index) => (
-                <tr key={index}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900 dark:text-white">{market.symbol}</div>
+                <tr key={index} className="hover:bg-bg-primary dark:hover:bg-bg-secondary transition-colors">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm font-medium text-text-primary">{market.symbol}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">${market.price.toLocaleString()}</td>
-                  <td className={`px-6 py-4 whitespace-nowrap text-sm ${market.change >= 0 ? 'text-success' : 'text-danger'}`}>
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm text-text-primary">${market.price.toLocaleString()}</td>
+                  <td className={`px-3 sm:px-6 py-4 whitespace-nowrap text-sm font-medium ${market.change >= 0 ? 'text-success' : 'text-danger'}`}>
                     {market.change >= 0 ? '+' : ''}{market.change}%
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{market.volume}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    <button className="bg-primary hover:bg-purple-700 text-white px-3 py-1 rounded text-xs">Trade</button>
+                  <td className="hidden sm:table-cell px-6 py-4 whitespace-nowrap text-sm text-text-primary">{market.volume}</td>
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm">
+                    <button className="bg-cta-primary hover:bg-cta-hover text-text-secondary px-3 py-1 rounded text-xs font-medium transition-colors">Trade</button>
                   </td>
                 </tr>
               ))}
