@@ -78,6 +78,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Responsive utilities */
@@ -85,6 +86,32 @@ body {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  
+  /* Mobile-specific improvements */
+  .mobile-optimized {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  .mobile-no-scroll {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Better touch targets for mobile */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-optimized {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
@@ -105,4 +132,40 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-tertiary);
+}
+
+/* Mobile scrollbar */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* Prevent text selection on interactive elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for better UX */
+.smooth-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus styles for better accessibility */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--cta-primary);
+  outline-offset: 2px;
+}
+
+/* Mobile-first responsive text */
+.responsive-text {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.responsive-heading {
+  font-size: clamp(1.25rem, 4vw, 2rem);
 }

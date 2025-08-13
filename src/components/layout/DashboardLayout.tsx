@@ -41,10 +41,10 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           onClose={() => setSidebarOpen(false)} 
         />
         
-        {/* Overlay for mobile */}
+        {/* Overlay for mobile - fully opaque */}
         {sidebarOpen && isMobile && (
           <div 
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/80 z-40 lg:hidden"
             onClick={handleOverlayClick}
           />
         )}
@@ -54,9 +54,10 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           flex-1 transition-all duration-300 ease-in-out
           ${sidebarOpen && isMobile ? 'ml-0' : 'ml-0'}
           lg:ml-0
-          p-4 sm:p-6 lg:p-8
+          p-2 sm:p-4 lg:p-6
           min-h-[calc(100vh-4rem)]
           bg-bg-primary
+          w-full
         `}>
           <div className="max-w-7xl mx-auto w-full">
             <div className="animate-fade-in">
