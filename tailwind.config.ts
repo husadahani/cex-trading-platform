@@ -10,23 +10,53 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // New color scheme based on user requirements
-        'bg-primary': '#0C0E12',      // Main background (dark)
-        'bg-secondary': '#EAECEF',    // Secondary background / borders
-        'cta-primary': '#F0B90B',     // Highlight / CTA (main action)
-        'cta-secondary': '#FCD535',   // Icons / secondary buttons
-        'text-primary': '#EAECEF',    // Main text (on dark bg)
-        'text-secondary': '#0C0E12',  // Text on light background
+        // Binance-inspired color scheme
+        'bg-primary': 'var(--bg-primary)',
+        'bg-secondary': 'var(--bg-secondary)',
+        'bg-tertiary': 'var(--bg-tertiary)',
+        'cta-primary': 'var(--cta-primary)',
+        'cta-secondary': 'var(--cta-secondary)',
+        'cta-hover': 'var(--cta-hover)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        'text-tertiary': 'var(--text-tertiary)',
+        'border-primary': 'var(--border-primary)',
+        'border-secondary': 'var(--border-secondary)',
+        'success': 'var(--success)',
+        'danger': 'var(--danger)',
+        'warning': 'var(--warning)',
+        'info': 'var(--info)',
         
         // Legacy colors for backward compatibility
-        primary: '#F0B90B',
-        success: '#00c853',
-        danger: '#ff3d00'
+        primary: 'var(--cta-primary)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(135deg, var(--cta-primary) 0%, var(--cta-secondary) 100%)',
+      },
+      screens: {
+        'xs': '475px',
+        '3xl': '1600px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
     },
   },

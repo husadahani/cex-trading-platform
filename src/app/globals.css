@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Light theme variables */
+  /* Binance-inspired color scheme */
   --background: #ffffff;
-  --foreground: #0C0E12;
+  --foreground: #1E2026;
   --bg-primary: #ffffff;
-  --bg-secondary: #EAECEF;
+  --bg-secondary: #F8F9FA;
+  --bg-tertiary: #F5F5F5;
   --cta-primary: #F0B90B;
   --cta-secondary: #FCD535;
-  --text-primary: #0C0E12;
-  --text-secondary: #0C0E12;
+  --cta-hover: #F8D33A;
+  --text-primary: #1E2026;
+  --text-secondary: #474D57;
+  --text-tertiary: #848E9C;
+  --border-primary: #E8E9EA;
+  --border-secondary: #EAECEF;
+  --success: #0ECB81;
+  --danger: #F6465D;
+  --warning: #F0B90B;
+  --info: #0ECB81;
 }
 
 @theme inline {
@@ -21,31 +30,79 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0C0E12;
+    --background: #0B0E11;
     --foreground: #EAECEF;
-    --bg-primary: #0C0E12;
-    --bg-secondary: #EAECEF;
+    --bg-primary: #0B0E11;
+    --bg-secondary: #1E2026;
+    --bg-tertiary: #2B2F36;
     --cta-primary: #F0B90B;
     --cta-secondary: #FCD535;
+    --cta-hover: #F8D33A;
     --text-primary: #EAECEF;
-    --text-secondary: #0C0E12;
+    --text-secondary: #B7BDC6;
+    --text-tertiary: #848E9C;
+    --border-primary: #2B2F36;
+    --border-secondary: #363A45;
+    --success: #0ECB81;
+    --danger: #F6465D;
+    --warning: #F0B90B;
+    --info: #0ECB81;
   }
 }
 
 /* Dark mode class for manual control */
 .dark {
-  --background: #0C0E12;
+  --background: #0B0E11;
   --foreground: #EAECEF;
-  --bg-primary: #0C0E12;
-  --bg-secondary: #EAECEF;
+  --bg-primary: #0B0E11;
+  --bg-secondary: #1E2026;
+  --bg-tertiary: #2B2F36;
   --cta-primary: #F0B90B;
   --cta-secondary: #FCD535;
+  --cta-hover: #F8D33A;
   --text-primary: #EAECEF;
-  --text-secondary: #0C0E12;
+  --text-secondary: #B7BDC6;
+  --text-tertiary: #848E9C;
+  --border-primary: #2B2F36;
+  --border-secondary: #363A45;
+  --success: #0ECB81;
+  --danger: #F6465D;
+  --warning: #F0B90B;
+  --info: #0ECB81;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
 }
