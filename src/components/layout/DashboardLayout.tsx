@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-bg-secondary dark:bg-bg-primary">
       <Header onMenuClick={() => setSidebarOpen(true)} />
       
       <div className="flex">
