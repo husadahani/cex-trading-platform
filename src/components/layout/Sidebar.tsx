@@ -66,14 +66,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   return (
     <>
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar - Fully opaque */}
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-bg-secondary border-r border-border-primary
+        fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-bg-secondary border-r border-border-primary
         transform transition-transform duration-300 ease-in-out lg:hidden
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        shadow-2xl
       `}>
         {/* Mobile Header */}
-        <div className="flex items-center justify-between p-4 border-b border-border-primary">
+        <div className="flex items-center justify-between p-3 sm:p-4 border-b border-border-primary">
           <h2 className="text-lg font-semibold text-text-primary">Menu</h2>
           <button
             onClick={onClose}
@@ -85,10 +86,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {/* Navigation Content */}
         <div className="h-full overflow-y-auto">
-          <div className="p-4 space-y-6">
+          <div className="p-3 sm:p-4 space-y-4 sm:space-y-6">
             {navigation.map((section) => (
               <div key={section.title}>
-                <h3 className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-3 px-3">
+                <h3 className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2 sm:mb-3 px-2 sm:px-3">
                   {section.title}
                 </h3>
                 <nav className="space-y-1">
@@ -99,7 +100,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                         key={item.name}
                         href={item.href}
                         className={`
-                          flex items-center px-3 py-3 text-sm font-medium rounded-lg transition-all duration-200
+                          flex items-center px-2 sm:px-3 py-2 sm:py-3 text-sm font-medium rounded-lg transition-all duration-200
                           ${isActive 
                             ? 'bg-gradient-primary text-text-secondary shadow-lg' 
                             : 'text-text-secondary hover:bg-bg-tertiary hover:text-text-primary'
@@ -107,8 +108,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                         `}
                         onClick={onClose}
                       >
-                        <item.icon className={`mr-3 w-5 h-5 ${isActive ? 'text-text-secondary' : 'text-text-tertiary'}`} />
-                        {item.name}
+                        <item.icon className={`mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5 ${isActive ? 'text-text-secondary' : 'text-text-tertiary'}`} />
+                        <span className="text-sm">{item.name}</span>
                       </Link>
                     );
                   })}
@@ -117,23 +118,23 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
 
             {/* Logout */}
-            <div className="pt-4 border-t border-border-primary">
-              <button className="flex items-center px-3 py-3 text-sm font-medium rounded-lg w-full text-left text-danger hover:bg-danger/10 transition-colors">
-                <LogOut className="mr-3 w-5 h-5" />
-                Logout
+            <div className="pt-3 sm:pt-4 border-t border-border-primary">
+              <button className="flex items-center px-2 sm:px-3 py-2 sm:py-3 text-sm font-medium rounded-lg w-full text-left text-danger hover:bg-danger/10 transition-colors">
+                <LogOut className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm">Logout</span>
               </button>
             </div>
 
             {/* Market Watch */}
-            <div className="border-t border-border-primary pt-4">
-              <h3 className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-3 px-3">
+            <div className="border-t border-border-primary pt-3 sm:pt-4">
+              <h3 className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2 sm:mb-3 px-2 sm:px-3">
                 Market Watch
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 {mockData.markets.slice(0, 4).map((market) => (
-                  <div key={market.symbol} className="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-bg-tertiary transition-colors">
-                    <span className="text-sm text-text-secondary">{market.symbol}</span>
-                    <span className={`text-sm font-semibold ${market.change >= 0 ? 'text-success' : 'text-danger'}`}>
+                  <div key={market.symbol} className="flex justify-between items-center py-1.5 sm:py-2 px-2 sm:px-3 rounded-lg hover:bg-bg-tertiary transition-colors">
+                    <span className="text-xs sm:text-sm text-text-secondary">{market.symbol}</span>
+                    <span className={`text-xs sm:text-sm font-semibold ${market.change >= 0 ? 'text-success' : 'text-danger'}`}>
                       ${market.price.toLocaleString()}
                     </span>
                   </div>
