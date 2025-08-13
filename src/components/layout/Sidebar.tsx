@@ -75,8 +75,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-800 
-        border-r border-gray-200 dark:border-gray-700 transform transition-transform 
+        fixed lg:static inset-y-0 left-0 z-50 w-64 bg-bg-secondary dark:bg-bg-primary 
+        border-r border-bg-secondary dark:border-bg-secondary/20 transform transition-transform 
         duration-300 ease-in-out mt-16 lg:mt-0 lg:translate-x-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
@@ -84,7 +84,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Navigation Sections */}
           {navigation.map((section) => (
             <div key={section.title}>
-              <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+              <h3 className="text-xs font-semibold text-text-secondary/60 dark:text-text-primary/60 uppercase tracking-wider mb-3">
                 {section.title}
               </h3>
               <nav className="space-y-1">
@@ -97,8 +97,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       className={`
                         flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors
                         ${isActive 
-                          ? 'bg-primary text-white' 
-                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                          ? 'bg-cta-primary text-text-secondary' 
+                          : 'text-text-secondary dark:text-text-primary hover:bg-bg-secondary/50 dark:hover:bg-bg-secondary/10'
                         }
                       `}
                       onClick={onClose}
@@ -114,21 +114,21 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
           {/* Logout */}
           <div>
-            <button className="flex items-center px-3 py-2 text-sm font-medium rounded-md w-full text-left text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">
+            <button className="flex items-center px-3 py-2 text-sm font-medium rounded-md w-full text-left text-danger hover:bg-danger/10 dark:hover:bg-danger/20 transition-colors">
               <LogOut className="mr-3 w-5 h-5" />
               Logout
             </button>
           </div>
 
           {/* Market Watch */}
-          <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+          <div className="border-t border-bg-secondary dark:border-bg-secondary/20 pt-4">
+            <h3 className="text-xs font-semibold text-text-secondary/60 dark:text-text-primary/60 uppercase tracking-wider mb-3">
               Market Watch
             </h3>
             <div className="space-y-2">
               {mockData.markets.slice(0, 4).map((market) => (
                 <div key={market.symbol} className="flex justify-between items-center py-2">
-                  <span className="text-sm text-gray-600 dark:text-gray-300">{market.symbol}</span>
+                  <span className="text-sm text-text-secondary dark:text-text-primary">{market.symbol}</span>
                   <span className={`text-sm font-semibold ${market.change >= 0 ? 'text-success' : 'text-danger'}`}>
                     ${market.price.toLocaleString()}
                   </span>

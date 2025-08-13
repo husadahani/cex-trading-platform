@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
+  /* Light theme variables */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0C0E12;
+  --bg-primary: #ffffff;
+  --bg-secondary: #EAECEF;
+  --cta-primary: #F0B90B;
+  --cta-secondary: #FCD535;
+  --text-primary: #0C0E12;
+  --text-secondary: #0C0E12;
 }
 
 @theme inline {
@@ -14,9 +21,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0C0E12;
+    --foreground: #EAECEF;
+    --bg-primary: #0C0E12;
+    --bg-secondary: #EAECEF;
+    --cta-primary: #F0B90B;
+    --cta-secondary: #FCD535;
+    --text-primary: #EAECEF;
+    --text-secondary: #0C0E12;
   }
+}
+
+/* Dark mode class for manual control */
+.dark {
+  --background: #0C0E12;
+  --foreground: #EAECEF;
+  --bg-primary: #0C0E12;
+  --bg-secondary: #EAECEF;
+  --cta-primary: #F0B90B;
+  --cta-secondary: #FCD535;
+  --text-primary: #EAECEF;
+  --text-secondary: #0C0E12;
 }
 
 body {

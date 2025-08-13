@@ -10,7 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#5D5CDE',
+        // New color scheme based on user requirements
+        'bg-primary': '#0C0E12',      // Main background (dark)
+        'bg-secondary': '#EAECEF',    // Secondary background / borders
+        'cta-primary': '#F0B90B',     // Highlight / CTA (main action)
+        'cta-secondary': '#FCD535',   // Icons / secondary buttons
+        'text-primary': '#EAECEF',    // Main text (on dark bg)
+        'text-secondary': '#0C0E12',  // Text on light background
+        
+        // Legacy colors for backward compatibility
+        primary: '#F0B90B',
         success: '#00c853',
         danger: '#ff3d00'
       },
